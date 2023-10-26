@@ -139,3 +139,22 @@ body {
   .bd-mode-toggle .dropdown-menu .active .bi {
     display: block !important;
   }
+
+  h1.knockout {
+    background-color: white;
+    color: black;
+    font-size: 4vw;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 10px;
+    width: 22%;
+    mix-blend-mode: screen;
+    text-transform: uppercase;
+  }
+
+  h2.sub-knockout {
+    margin: 0 auto;
+    padding: 10px;
+    width: 22%;
+    font-size: 3vw;
+  }
