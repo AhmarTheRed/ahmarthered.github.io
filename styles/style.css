@@ -188,9 +188,14 @@ body {
     animation: fadeInUp 1s ease-out 0.3s both;
   }
 
-  /* Preserve knockout effect during animation */
-  h1.knockout {
-    opacity: 1 !important;
+  /* Prevent animation from affecting knockout text blend mode */
+  main h1.knockout {
+    animation: none;
+    opacity: 1;
+  }
+
+  main h2.sub-knockout {
+    animation: fadeIn 1.2s ease-out 0.8s both;
   }
 
   footer {
