@@ -158,3 +158,89 @@ body {
     width: 22%;
     font-size: 3vw;
   }
+
+  /* Fade-in animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  header {
+    animation: fadeIn 1s ease-out;
+  }
+
+  main {
+    animation: fadeInUp 1s ease-out 0.3s both;
+  }
+
+  footer {
+    animation: fadeIn 1.5s ease-out 0.6s both;
+  }
+
+  /* Animated social buttons */
+  .social-btn {
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .social-btn i {
+    transition: all 0.3s ease;
+  }
+
+  .social-btn:hover {
+    transform: translateY(-5px);
+  }
+
+  .social-btn:hover i {
+    transform: scale(1.2);
+  }
+
+  /* LinkedIn blue */
+  .social-btn.linkedin:hover i {
+    color: #0077b5;
+    filter: drop-shadow(0 0 10px rgba(0, 119, 181, 0.8));
+  }
+
+  /* GitHub purple/white */
+  .social-btn.github:hover i {
+    color: #6e5494;
+    filter: drop-shadow(0 0 10px rgba(110, 84, 148, 0.8));
+  }
+
+  /* Email red */
+  .social-btn.email:hover i {
+    color: #ea4335;
+    filter: drop-shadow(0 0 10px rgba(234, 67, 53, 0.8));
+  }
+
+  /* Pulse animation for social buttons */
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  .social-btn:focus i {
+    animation: pulse 0.6s ease-in-out;
+  }
