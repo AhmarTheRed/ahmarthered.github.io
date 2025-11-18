@@ -184,18 +184,14 @@ body {
     animation: fadeIn 1s ease-out;
   }
 
-  main {
-    animation: fadeInUp 1s ease-out 0.3s both;
-  }
-
-  /* Prevent animation from affecting knockout text blend mode */
+  /* Remove animation from main container to preserve knockout effect */
   main h1.knockout {
-    animation: none;
-    opacity: 1;
+    /* No animation - appears immediately to preserve mix-blend-mode */
   }
 
+  /* Animate only the social icons */
   main h2.sub-knockout {
-    animation: fadeIn 1.2s ease-out 0.8s both;
+    animation: fadeIn 1s ease-out 0.5s both;
   }
 
   footer {
