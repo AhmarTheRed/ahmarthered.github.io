@@ -188,6 +188,11 @@ body {
     animation: fadeInUp 1s ease-out 0.3s both;
   }
 
+  /* Preserve knockout effect during animation */
+  h1.knockout {
+    opacity: 1 !important;
+  }
+
   footer {
     animation: fadeIn 1.5s ease-out 0.6s both;
   }
