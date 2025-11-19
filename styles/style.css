@@ -158,3 +158,80 @@ body {
     width: 22%;
     font-size: 3vw;
   }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Pulse animation for social buttons */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 100;;
+    }
+    50% {
+      transform: scale(2.05);
+      opacity: 50;
+    }
+  }
+
+  main h1.knockout {
+    animation: fadeIn 1s ease-out 0.5s both;
+  }
+
+  /* Animate only the social icons */
+  main h2.sub-knockout {
+    animation: pulse 1s ease-out 0.5s both;
+  }
+
+    /* Animated social buttons */
+  .social-btn {
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .social-btn i {
+    transition: all 0.3s ease;
+  }
+
+  .social-btn:hover {
+    transform: translateY(-5px);
+  }
+
+  .social-btn:hover i {
+    transform: scale(1.2);
+  }
+
+  /* LinkedIn blue */
+  .social-btn.linkedin:hover i {
+    color: #0077b5;
+    filter: drop-shadow(0 0 10px rgba(0, 119, 181, 0.8));
+  }
+
+  /* GitHub purple/white */
+  .social-btn.github:hover i {
+    color: #6e5494;
+    filter: drop-shadow(0 0 10px rgba(110, 84, 148, 0.8));
+  }
+
+  /* Email red */
+  .social-btn.email:hover i {
+    color: #ea4335;
+    filter: drop-shadow(0 0 10px rgba(234, 67, 53, 0.8));
+  }
+
+  .social-btn:focus i {
+    animation: pulse 0.6s ease-in-out;
+  }
